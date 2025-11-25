@@ -9,21 +9,35 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    
 </head>
+
 <body>
     <!-- HERO SECTION -->
-      <section class="hero-section">
-            <div class="container text-center">
-                <h1 class="display-4 fw-bold">Welcome to ClassWork Software Developers</h1>
-                <p class="lead">Master modern software development skills and build your future career</p>
-                <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
-                    <a href="#" class="btn btn-light btn-lg">Explore Courses</a>
-                    <a href="#" class="btn btn-outline-light btn-lg">Student Portal</a>
-                </div>
+    <section class="hero-section">
+        <!-- Video Background -->
+        <video class="video-background" autoplay muted loop playsinline>
+            <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+            <!-- Fallback image if video doesn't load -->
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Dark overlay for better text readability -->
+        <div class="overlay"></div>
+        
+        <!-- Content -->
+        <div class="container text-center hero-content">
+            <h1 class="display-4 fw-bold">Welcome to ClassWork Software Developers</h1>
+            <p class="lead">Master modern software development skills and build your future career</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+                <a href="#" class="btn btn-light btn-lg">Explore Courses</a>
+                <a href="#" class="btn btn-outline-light btn-lg">Student Portal</a>
             </div>
-        </section>
-          <!-- Bootstrap JS with Popper -->
+        </div>
+    </section>
+
+    <!-- Bootstrap JS with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
