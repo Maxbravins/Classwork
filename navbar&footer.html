@@ -9,166 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Custom CSS for styling */
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Navbar Styles */
-        .navbar-custom {
-            background-color: var(--secondary-color);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 0.8rem 1rem;
-        }
-
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--light-color) !important;
-        }
-
-        .navbar-brand span {
-            color: var(--primary-color);
-        }
-
-        .nav-link {
-            color: var(--light-color) !important;
-            font-weight: 500;
-            margin: 0 0.5rem;
-            transition: color 0.3s;
-            position: relative;
-        }
-
-        .nav-link:hover {
-            color: var(--primary-color) !important;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: var(--primary-color);
-            transition: width 0.3s;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .navbar-toggler {
-            border: none;
-            color: var(--light-color);
-        }
-
-        .navbar-toggler:focus {
-            box-shadow: none;
-        }
-
-        /* Main Content Styles */
-        .main-content {
-            flex: 1;
-            padding: 2rem 0;
-        }
-
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 4rem 0;
-            border-radius: 0 0 20px 20px;
-            margin-bottom: 2rem;
-        }
-
-        /* Footer Styles */
-        .footer-custom {
-            background-color: var(--secondary-color);
-            color: var(--light-color);
-            padding: 3rem 0 1rem;
-            margin-top: auto;
-        }
-
-        .footer-heading {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-links {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links a {
-            color: var(--light-color);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .social-icons a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            margin-right: 10px;
-            color: var(--light-color);
-            transition: all 0.3s;
-        }
-
-        .social-icons a:hover {
-            background-color: var(--primary-color);
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 1.5rem;
-            margin-top: 2rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 2rem 0;
-            }
-
-            .footer-custom {
-                text-align: center;
-            }
-
-            .social-icons {
-                justify-content: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+   
 </head>
 
 <body>
@@ -205,68 +47,7 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="container text-center">
-                <h1 class="display-4 fw-bold">Welcome to Our Class of Software Developers</h1>
-                <p class="lead">A modern, responsive website with Bootstrap navbar and footer</p>
-                <a href="#" class="btn btn-light btn-lg mt-3">Get Started</a>
-            </div>
-        </section>
 
-        <!-- Sample Content -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <h2 class="text-center mb-4">About Our Class</h2>
-                    <p class="lead text-center">We are a dedicated class of aspiring software developers at the
-                        Institute of Software Technology, united by a shared passion for innovation, problem-solving,
-                        and building impactful digital solutions. Our learning environment is centered on hands-on
-                        training, real-world projects, and continuous growth in modern technologies.
-
-                        As a team, we explore multiple programming languages, software development methodologies, and
-                        industry best practices. From web and mobile development to software engineering principles and
-                        emerging technologies, we strive to master the skills needed to shape the future of tech.
-
-                        Driven by curiosity and collaboration, we work together to transform ideas into functional,
-                        user-centered applications. Our mission is to grow into skilled professionals who not only
-                        understand technology but use it to solve real problems and create meaningful change.</p>
-
-                    <div class="row mt-5">
-                        <div class="col-md-4 mb-4">
-                            <div class="card text-center h-100">
-                                <div class="card-body">
-                                    <i class="fas fa-rocket fa-3x text-primary mb-3"></i>
-                                    <h5 class="card-title">Fast Performance</h5>
-                                    <p class="card-text">Our solutions are optimized for speed and efficiency.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card text-center h-100">
-                                <div class="card-body">
-                                    <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
-                                    <h5 class="card-title">Secure & Reliable</h5>
-                                    <p class="card-text">We prioritize security and reliability in all our products.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card text-center h-100">
-                                <div class="card-body">
-                                    <i class="fas fa-headset fa-3x text-primary mb-3"></i>
-                                    <h5 class="card-title">24/7 Support</h5>
-                                    <p class="card-text">Our support team is available around the clock to help you.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer-custom">
@@ -274,8 +55,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
                     <h5 class="footer-heading">About Us</h5>
-                    <p>We are a modern web development company focused on creating beautiful, functional websites using
-                        the latest technologies.</p>
+                  
                     <div class="social-icons d-flex mt-4">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -283,35 +63,9 @@
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-4">
-                    <h5 class="footer-heading">Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">cards</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="footer-heading">Services</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Mobile Development</a></li>
-                        <li><a href="#">Digital Marketing</a></li>
-
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="footer-heading">Contact Us</h5>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt me-2"></i> Mpaka Rd, 6th floor West point Building,
-                            Parklands</li>
-                        <li><i class="fas fa-phone me-2"></i> 0739944882</li>
-                        <li><i class="fas fa-envelope me-2"></i> info@isteducation.com</li>
-                    </ul>
-                </div>
+          
+             
+          
             </div>
             <div class="copyright">
                 <p>&copy; 2025 Classwork. All Rights Reserved.</p>
