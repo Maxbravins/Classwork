@@ -6,9 +6,180 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Ericks cards</h1>
-    <h1>Ericks cards</h1>
-    <h1>Ericks cards</h1>
-    <h1>Ericks cards</h1>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classwork | Course Materials</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">EduClass</div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#" class="active">Classwork</a></li>
+                        <li><a href="#">Assignments</a></li>
+                        <li><a href="#">Grades</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-title">
+            <h1>Classwork Materials</h1>
+            <p>Access all your course materials, assignments, and resources in one place</p>
+        </section>
+
+        <section class="filters">
+            <button class="filter-btn active">All Subjects</button>
+            <button class="filter-btn">Mathematics</button>
+            <button class="filter-btn">Science</button>
+            <button class="filter-btn">English</button>
+            <button class="filter-btn">History</button>
+        </section>
+
+        <section class="cards-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-category math">Mathematics</span>
+                    <h3 class="card-title">Algebra Fundamentals</h3>
+                    <p class="card-date">Due: Oct 15, 2023</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Introduction to algebraic expressions, equations, and problem-solving techniques. This module covers the basics you need to build a strong foundation.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="card-btn primary-btn">View Materials</a>
+                    <a href="#" class="card-btn secondary-btn">Download</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-category science">Science</span>
+                    <h3 class="card-title">Cell Biology</h3>
+                    <p class="card-date">Due: Oct 18, 2023</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Explore the structure and function of cells, the basic units of life. Includes lab activities and microscopic observations.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="card-btn primary-btn">View Materials</a>
+                    <a href="#" class="card-btn secondary-btn">Download</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-category english">English</span>
+                    <h3 class="card-title">Literary Analysis</h3>
+                    <p class="card-date">Due: Oct 20, 2023</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Learn to analyze literary texts, identify themes, and develop critical thinking skills through close reading of selected works.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="card-btn primary-btn">View Materials</a>
+                    <a href="#" class="card-btn secondary-btn">Download</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-category history">History</span>
+                    <h3 class="card-title">Ancient Civilizations</h3>
+                    <p class="card-date">Due: Oct 22, 2023</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Journey through the ancient world, exploring the rise and fall of early civilizations and their lasting impact on modern society.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="card-btn primary-btn">View Materials</a>
+                    <a href="#" class="card-btn secondary-btn">Download</a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-category math">Mathematics</span>
+                    <h3 class="card-title">Geometry Basics</h3>
+                    <p class="card-date">Due: Oct 25, 2023</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Introduction to geometric concepts, shapes, and theorems. Includes hands-on activities to understand spatial relationships.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="card-btn primary-btn">View Materials</a>
+                    <a href="#" class="card-btn secondary-btn">Download</a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-category science">Science</span>
+                    <h3 class="card-title">Physics of Motion</h3>
+                    <p class="card-date">Due: Oct 28, 2023</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Study the fundamental principles of motion, forces, and energy through experiments and real-world applications.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="card-btn primary-btn">View Materials</a>
+                    <a href="#" class="card-btn secondary-btn">Download</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">EduClass</div>
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <p class="copyright">&copy; 2023 EduClass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // In a real application, you would filter the cards here
+                    // For this example, we'll just log the filter
+                    console.log(`Filtering by: ${this.textContent}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
 </body>
 </html>
