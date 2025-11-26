@@ -1,218 +1,263 @@
+/* 
+EASTER CSS */
+:root {
+  --bg: #f7f7f7;
+  --text: #333;
+  --card-bg: #FFF7E6;
+  --primary: #f4b860;
+  --button-hover: #e39a42;
+  --border: #d7d7d7;
+}
 
-    :root {
-      --bg: #f7f7f7;
-      --text: #333;
-      --card-bg: #FFF7E6;
-      --primary: #f4b860;
-      --button-hover: #e39a42;
-      --border: #d7d7d7;
-    }
+/* DARK MODE */
+[data-theme="dark"] {
+  --bg: #0f0f0f;
+  --text: #eeeeee;
+  --card-bg: #1a1a1a;
+  --primary: #f4b860;
+  --button-hover: #d28b30;
+  --border: #444;
+}
 
-    /* DARK MODE VARIABLES */
-    [data-theme="dark"] {
-      --bg: #0f0f0f;
-      --text: #eeeeee;
-      --card-bg: #1a1a1a;
-      --primary: #f4b860;
-      --button-hover: #d28b30;
-      --border: #444;
-    }
+/* ------------------------------------
+   GLOBAL
+------------------------------------ */
+body.body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.4s ease;
+  overflow-x: hidden;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-      transition: 0.4s ease;
-    }
+.container.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
+.contact-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+  animation: fadeDown 0.9s ease-in-out;
+}
 
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-weight: 600;
-      animation: fadeDown 0.9s ease-in-out;
-    }
+/* ------------------------------------
+   DARK MODE TOGGLE
+------------------------------------ */
+.dark-toggle.toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--card-bg);
+  padding: 10px 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: 0.3s;
+}
 
-    /* Dark Mode Toggle */
-    .dark-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: var(--card-bg);
-      padding: 10px 14px;
-      border-radius: 30px;
-      cursor: pointer;
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-      z-index: 9999;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-    .dark-toggle:hover {
-      transform: scale(1.05);
-    }
+.dark-toggle.toggle-btn:hover {
+  transform: scale(1.05);
+}
 
-    /* Layout (Desktop) */
-    .top-section {
-      display: grid;
-      grid-template-columns: 1fr 350px;
-      gap: 30px;
-      animation: fadeUp 1.1s ease-in-out;
-    }
+/* ------------------------------------
+   LAYOUT
+------------------------------------ */
+.top-section.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+  animation: fadeUp 1.1s ease-in-out;
+}
 
-    /* Mobile Stacking */
-    @media screen and (max-width: 900px) {
-      .top-section {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 25px !important;
-      }
-    }
+@media (max-width: 900px) {
+  .top-section.contact-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
 
-    /* Card Styling */
-    .card {
-      background: var(--card-bg);
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      animation: slideRight 1.2s ease;
-      transition: 0.3s ease;
-    }
+/* ------------------------------------
+   FORM
+------------------------------------ */
+.contact-form {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  animation: slideLeft 1.2s ease;
+}
 
-    .card h2 {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      margin-bottom: 15px;
-    }
+.contact-form h2.form-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
 
-    .info p {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      margin: 10px 0;
-    }
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  background: #fff;
+  transition: 0.3s;
+}
 
-    /* Form Styling */
-    form {
-      background: var(--card-bg);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      animation: slideLeft 1.2s ease;
-      transition: 0.3s ease;
-    }
+[data-theme="dark"] .contact-form input,
+[data-theme="dark"] .contact-form textarea {
+  background: #111;
+  color: #fff;
+  border-color: #333;
+}
 
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background: #fff;
-      transition: 0.3s;
-    }
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 6px rgba(244,184,96,0.4);
+  outline: none;
+}
 
-    [data-theme="dark"] form input,
-    [data-theme="dark"] form textarea {
-      background: #111;
-      color: #fff;
-      border-color: #333;
-    }
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.3s;
+}
 
-    form input:focus, form textarea:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 6px rgba(244,184,96,0.4);
-      outline: none;
-    }
+.btn-submit:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
 
-    button {
-      width: 100%;
-      padding: 14px;
-      background: var(--primary);
-      color: #fff;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 6px;
-      transition: 0.3s;
-    }
-    button:hover {
-      background: var(--button-hover);
-      transform: translateY(-2px);
-    }
+/* ------------------------------------
+   INFO CARD
+------------------------------------ */
+.card.contact-card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  animation: slideRight 1.2s ease;
+}
 
-    /* Social Icons */
-    .social-links a {
-      font-size: 28px;
-      text-decoration: none !important;
-      transition: 0.3s;
-    }
-    .social-links a:hover {
-      transform: scale(1.25);
-    }
+.info-heading {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    /* WhatsApp Button */
-    .wa-float {
-      position: fixed;
-      width: 55px;
-      height: 55px;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 28px;
-      text-decoration: none;
-      animation: pulseWA 1.8s infinite ease-in-out;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      z-index: 999;
-      transition: 0.3s;
-    }
-    .wa-float:hover {
-      transform: scale(1.15);
-    }
+.info-section p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+}
 
-    @keyframes pulseWA {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.08); }
-      100% { transform: scale(1); }
-    }
+/* ------------------------------------
+   SOCIAL ICONS
+------------------------------------ */
+.social-container a {
+  font-size: 28px;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-    /* Map */
-    .map iframe {
-      width: 100%;
-      height: 350px;
-      border: none;
-      border-radius: 12px;
-      animation: fadeUp 1.3s ease-in-out;
-    }
+.social-container a:hover {
+  transform: scale(1.25);
+}
 
-    /* Animations */
-    @keyframes fadeDown { from {opacity:0;transform:translateY(-20px);} to {opacity:1;transform:translateY(0);} }
-    @keyframes fadeUp { from {opacity:0;transform:translateY(20px);} to {opacity:1;transform:translateY(0);} }
-    @keyframes slideLeft { from {opacity:0;transform:translateX(-40px);} to {opacity:1;transform:translateX(0);} }
-    @keyframes slideRight { from {opacity:0;transform:translateX(40px);} to {opacity:1;transform:translateX(0);} }
+/* ------------------------------------
+   MAP
+------------------------------------ */
+.map-wrapper .map-iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  border-radius: 12px;
+  animation: fadeUp 1.3s ease-in-out;
+}
 
-     
+/* ------------------------------------
+   WHATSAPP BUTTON
+------------------------------------ */
+.wa-float.whatsapp-btn {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  text-decoration: none;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  animation: pulseWA 1.8s infinite ease-in-out;
+}
 
-    
+.whatsapp-btn:hover {
+  transform: scale(1.15);
+}
+
+@keyframes pulseWA {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* ------------------------------------
+   ANIMATIONS
+------------------------------------ */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+
+
+
+
+/* erick css */
+
     
         * {
             margin: 0;
